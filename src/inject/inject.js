@@ -3,7 +3,7 @@ chrome.extension.sendMessage({}, function(response) {
 	if (document.readyState === "complete") {
 		clearInterval(readyStateCheckInterval);
 
-        doc_body = document.getElementByTagName('body');
+        doc_body = document.getElementsByTagName('body');
         
         if (doc_body.length != 1) {return;}
         
