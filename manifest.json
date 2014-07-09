@@ -1,6 +1,6 @@
 {
   "name": "HS UX improvements",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "manifest_version": 2,
   "description": "This extension removes annoying stuff from hs.fi.",
   "homepage_url": "https://github.com/ypcs/hsux",
@@ -17,7 +17,7 @@
     "persistent": false
   },
   "permissions": [
-    "http://www.hs.fi"
+    "http://www.hs.fi/*"
   ],
   "content_scripts": [
     {
