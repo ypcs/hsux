@@ -1,8 +1,8 @@
 {
   "name": "HS UX improvements",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "manifest_version": 2,
-  "description": "This extension removes annoying stuff from hs.fi.",
+  "description": "This extension removes annoying full-page ads from HS.fi, if you're logged in to the site.",
   "homepage_url": "https://github.com/ypcs/hsux",
   "icons": {
     "16": "icons/icon16.png",
