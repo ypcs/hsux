@@ -24,7 +24,7 @@ chrome.extension.sendMessage({}, function(response) {
             for (var i=0; i<hide_these_elements.length; i++) {
                 var e = document.getElementById(hide_these_elements[i]);
                 if (e) {
-                    console.log("HSUX: removing element #" + hide_these_elements[i] ".");
+                    console.log("HSUX: removing element #" + hide_these_elements[i] + ".");
                     e.remove();
                 }
             }
