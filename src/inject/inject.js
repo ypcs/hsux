@@ -13,10 +13,18 @@ chrome.extension.sendMessage({}, function(response) {
             doc_body[0].classList.remove('frontpage-ad-visible');
         }
 
-        // Hide 'order now plz' campaigns
-        var e = document.getElementById('order-campaign-element');
-        if (e) {
-            e.remove();
+        // Remove other elements from the page
+        var hide_these_elements = [
+            'order-campaign-element', // 'Order now plz'
+            //'news-list-area',         // Newsfeeds for IL, Metro, etc.
+            //'iltapulu_fp_box_iframe', // Iltapulu
+        ];
+
+        for (var i=0; i<hide_these_elements.length; i++) {
+            var e = document.getElementById(hide_these_elements[i]);
+            if (e) {
+                e.remove();
+            }
         }
 	}
 	}, 10);
