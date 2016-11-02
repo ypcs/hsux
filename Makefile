@@ -1,4 +1,4 @@
-SOURCES = manifest.json src icons _locales
+SOURCES = manifest.json src icons
 
 all:
 
