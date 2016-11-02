@@ -18,6 +18,7 @@ chrome.extension.sendMessage({}, function(response) {
             'order-campaign-element', // 'Order now plz'
             //'news-list-area',         // Newsfeeds for IL, Metro, etc.
             //'iltapulu_fp_box_iframe', // Iltapulu
+            //'top-extra-links',        // Top extra links, 'HS', 'Nyt', 'Oikotie' etc.
         ];
 
         for (var i=0; i<hide_these_elements.length; i++) {
