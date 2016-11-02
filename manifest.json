@@ -11,12 +11,14 @@
   },
   "default_locale": "en",
   "permissions": [
-    "http://www.hs.fi/*"
+    "http://www.hs.fi/*",
+    "https://www.hs.fi/*"
   ],
   "content_scripts": [
     {
       "matches": [
-        "http://www.hs.fi/*"
+        "http://www.hs.fi/*",
+        "https://www.hs.fi/*"
       ],
       "js": [
         "src/inject/inject.js"
