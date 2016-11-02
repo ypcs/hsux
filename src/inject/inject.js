@@ -12,6 +12,12 @@ chrome.extension.sendMessage({}, function(response) {
             console.log("HSUX: Removing full-page ad.");
             doc_body[0].classList.remove('frontpage-ad-visible');
         }
+
+        // Hide 'order now plz' campaigns
+        var e = document.getElementById('order-campaign-element');
+        if (e) {
+            e.remove();
+        }
 	}
 	}, 10);
 });
