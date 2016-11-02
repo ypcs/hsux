@@ -1,8 +1,6 @@
-console.log("HSUX: inject.js loaded.");
 chrome.extension.sendMessage({}, function(response) {
 	var readyStateCheckInterval = setInterval(function() {
 	if (document.readyState === "complete") {
-	    console.log("HSUX: Page loaded.");
 		clearInterval(readyStateCheckInterval);
 
         var doc_body = document.getElementsByTagName('body');
