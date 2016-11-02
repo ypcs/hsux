@@ -5,7 +5,7 @@ chrome.extension.sendMessage({}, function(response) {
 	    console.log("HSUX: Page loaded.");
 		clearInterval(readyStateCheckInterval);
 
-        doc_body = document.getElementsByTagName('body');
+        var doc_body = document.getElementsByTagName('body');
         
         if (doc_body.length != 1) {return;}
         
