@@ -5,5 +5,5 @@ all:
 clean:
 	rm -f hsux.zip
 
-dist:
+dist: clean
 	zip -r9 hsux.zip $(SOURCES)
