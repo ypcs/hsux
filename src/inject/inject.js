@@ -9,6 +9,7 @@ chrome.extension.sendMessage({}, function(response) {
         ga('hsux.set', 'checkProtocolTask', function(){}); // see <http://stackoverflow.com/a/22152353/899560>
         ga('hsux.send', {hitType: 'event', eventCategory: 'user', eventAction: 'load', eventLabel: 'Load HSUX'});
     }
+    console.log("HSUX: loaded extension.");
     
     var readyStateCheckInterval = setInterval(function() {
         if (document.readyState === "complete") {
