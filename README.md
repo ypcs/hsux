@@ -1,4 +1,4 @@
-HSUX (Chrome Plugin)
+HSUX (Chrome Plugin) (remove HS.fi full-page ads)
 ==========================
 
 Available in the [Chrome Web Store](https://chrome.google.com/webstore/detail/hs-ux-improvements/llbigclocjogefafobdgkcdpioikhbfa).
