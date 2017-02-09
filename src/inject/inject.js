@@ -6,9 +6,9 @@ chrome.extension.sendMessage({}, function(response) {
 
     ga('create', 'UA-420043-34', 'auto', 'hsux');
     ga('hsux.send', {hitType: 'event', eventCategory: 'user', eventAction: 'load', eventLabel: 'Load HSUX'});
-
-	var readyStateCheckInterval = setInterval(function() {
-       if (document.readyState === "complete") {
+    
+    var readyStateCheckInterval = setInterval(function() {
+        if (document.readyState === "complete") {
           clearInterval(readyStateCheckInterval);
 
           var doc_body = document.getElementsByTagName('body');
