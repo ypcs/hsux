@@ -4,9 +4,11 @@ chrome.extension.sendMessage({}, function(response) {
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-420043-34', 'auto', 'hsux');
-    ga('hsux.set', 'checkProtocolTask', function(){}); // see <http://stackoverflow.com/a/22152353/899560>
-    ga('hsux.send', {hitType: 'event', eventCategory: 'user', eventAction: 'load', eventLabel: 'Load HSUX'});
+    if (typeof ga !=== 'undefined') {
+        ga('create', 'UA-420043-34', 'auto', 'hsux');
+        ga('hsux.set', 'checkProtocolTask', function(){}); // see <http://stackoverflow.com/a/22152353/899560>
+        ga('hsux.send', {hitType: 'event', eventCategory: 'user', eventAction: 'load', eventLabel: 'Load HSUX'});
+    }
     
     var readyStateCheckInterval = setInterval(function() {
         if (document.readyState === "complete") {
@@ -20,7 +22,9 @@ chrome.extension.sendMessage({}, function(response) {
         if (doc_body[0].classList.contains('frontpage-ad-visible') && doc_body[0].classList.contains('user-logged-in')) {
             console.log("HSUX: Removing full-page ad.");
             doc_body[0].classList.remove('frontpage-ad-visible');
-            ga('hsux.send', {hitType: 'event', eventCategory: 'user', eventAction: 'remove-frontpage-ad', eventLabel: 'Remove frontpage ad'});
+            if (typeof ga !=== 'undefined') {
+                ga('hsux.send', {hitType: 'event', eventCategory: 'user', eventAction: 'remove-frontpage-ad', eventLabel: 'Remove frontpage ad'});
+            }
         }
 
         // Remove other elements from the page
@@ -36,7 +40,9 @@ chrome.extension.sendMessage({}, function(response) {
                 if (e) {
                     console.log("HSUX: removing element #" + hide_these_elements[i] + ".");
                     e.remove();
-                    ga('hsux.send', {hitType: 'event', eventCategory: 'user', eventAction: 'remove-element-' + hide_these_elements[i], eventLabel: 'Remove element ' + hide_these_elements[i]});
+                    if (typeof ga !=== 'undefined') {
+                        ga('hsux.send', {hitType: 'event', eventCategory: 'user', eventAction: 'remove-element-' + hide_these_elements[i], eventLabel: 'Remove element ' + hide_these_elements[i]});
+                    }
                 }
             }
         }
