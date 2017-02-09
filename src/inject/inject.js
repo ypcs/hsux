@@ -5,6 +5,7 @@ chrome.extension.sendMessage({}, function(response) {
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-420043-34', 'auto', 'hsux');
+    ga('hsux.set', 'checkProtocolTask', function(){}); // see <http://stackoverflow.com/a/22152353/899560>
     ga('hsux.send', {hitType: 'event', eventCategory: 'user', eventAction: 'load', eventLabel: 'Load HSUX'});
     
     var readyStateCheckInterval = setInterval(function() {
