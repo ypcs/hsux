@@ -1,9 +1,9 @@
 {
-  "name": "HSUX (remove HS.fi full-page ads)",
-  "short_name": "HSUX",
-  "version": "1.2.4",
+  "name": "HSUX (UI fixes)",
+  "short_name": "HSUX-UI",
+  "version": "0.1",
   "manifest_version": 2,
-  "description": "This extension removes annoying full-page ads from HS.fi, if you're logged in to the site.",
+  "description": "This extension does misc changes to HS.fi UI",
   "homepage_url": "https://github.com/ypcs/hsux",
   "icons": {
     "16": "icons/icon16.png",
